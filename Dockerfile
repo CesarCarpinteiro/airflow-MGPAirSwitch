@@ -16,12 +16,17 @@ RUN apt-get update && apt-get install -y \
     gfortran \
     python3-dev
 
+    # Allow 'airflow' user to access Docker
+#RUN usermod -aG docker airflow
+    
+    # Switch back to Airflow user
 USER airflow
-# Upgrade pip
+    
+    # Upgrade pip
 RUN python -m pip install --no-cache-dir --upgrade pip
-
-# Copy the requirements file into the container
+    
+    # Copy the requirements file
 COPY requirements.txt /requirements.txt
-
-# Install Python dependencies from requirements.txt
+    
+    # Install Python dependencies
 RUN pip install --no-cache-dir -r /requirements.txt

@@ -1,0 +1,48 @@
+[2025-02-09T22:26:14.192+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-09T22:26:14.202+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mgp-airflow1.docker_command_hello manual__2025-02-09T22:26:12.058355+00:00 [queued]>
+[2025-02-09T22:26:14.205+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mgp-airflow1.docker_command_hello manual__2025-02-09T22:26:12.058355+00:00 [queued]>
+[2025-02-09T22:26:14.205+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-09T22:26:14.210+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): docker_command_hello> on 2025-02-09 22:26:12.058355+00:00
+[2025-02-09T22:26:14.215+0000] {standard_task_runner.py:72} INFO - Started process 685 to run task
+[2025-02-09T22:26:14.217+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'mgp-***1', 'docker_command_hello', 'manual__2025-02-09T22:26:12.058355+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/mgpMap.py', '--cfg-path', '/tmp/tmpxaw6o8sl']
+[2025-02-09T22:26:14.219+0000] {standard_task_runner.py:105} INFO - Job 22: Subtask docker_command_hello
+[2025-02-09T22:26:14.230+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.9/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-09T22:26:14.250+0000] {task_command.py:467} INFO - Running <TaskInstance: mgp-airflow1.docker_command_hello manual__2025-02-09T22:26:12.058355+00:00 [running]> on host 57a97d720241
+[2025-02-09T22:26:14.288+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mgp-***1' AIRFLOW_CTX_TASK_ID='docker_command_hello' AIRFLOW_CTX_EXECUTION_DATE='2025-02-09T22:26:12.058355+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-09T22:26:12.058355+00:00'
+[2025-02-09T22:26:14.289+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-09T22:26:14.324+0000] {docker.py:486} INFO - Pulling docker image python:3.9-slim
+[2025-02-09T22:26:16.132+0000] {docker.py:500} INFO - 3.9-slim: Pulling from library/python
+[2025-02-09T22:26:16.513+0000] {docker.py:500} INFO - 4d2547c08499: Pulling fs layer
+[2025-02-09T22:26:16.515+0000] {docker.py:500} INFO - 93aa4e5d5dd6: Pulling fs layer
+[2025-02-09T22:26:16.515+0000] {docker.py:500} INFO - 46f3ffc15ad9: Pulling fs layer
+[2025-02-09T22:26:16.516+0000] {docker.py:500} INFO - a3919cd00403: Pulling fs layer
+[2025-02-09T22:26:16.517+0000] {docker.py:500} INFO - a3919cd00403: Waiting
+[2025-02-09T22:26:17.261+0000] {docker.py:500} INFO - 93aa4e5d5dd6: Downloading
+[2025-02-09T22:26:17.307+0000] {docker.py:500} INFO - 46f3ffc15ad9: Downloading
+[2025-02-09T22:26:17.347+0000] {docker.py:500} INFO - 93aa4e5d5dd6: Verifying Checksum
+[2025-02-09T22:26:17.349+0000] {docker.py:500} INFO - 93aa4e5d5dd6: Download complete
+[2025-02-09T22:26:17.350+0000] {docker.py:500} INFO - 4d2547c08499: Downloading
+[2025-02-09T22:26:17.837+0000] {docker.py:500} INFO - 46f3ffc15ad9: Verifying Checksum
+[2025-02-09T22:26:17.838+0000] {docker.py:500} INFO - 46f3ffc15ad9: Download complete
+[2025-02-09T22:26:18.075+0000] {docker.py:500} INFO - a3919cd00403: Downloading
+[2025-02-09T22:26:18.077+0000] {docker.py:500} INFO - a3919cd00403: Verifying Checksum
+[2025-02-09T22:26:18.077+0000] {docker.py:500} INFO - a3919cd00403: Download complete
+[2025-02-09T22:26:18.086+0000] {docker.py:500} INFO - 4d2547c08499: Download complete
+[2025-02-09T22:26:18.121+0000] {docker.py:500} INFO - 4d2547c08499: Extracting
+[2025-02-09T22:26:19.050+0000] {docker.py:500} INFO - 4d2547c08499: Pull complete
+[2025-02-09T22:26:19.052+0000] {docker.py:500} INFO - 93aa4e5d5dd6: Extracting
+[2025-02-09T22:26:19.137+0000] {docker.py:500} INFO - 93aa4e5d5dd6: Pull complete
+[2025-02-09T22:26:19.140+0000] {docker.py:500} INFO - 46f3ffc15ad9: Extracting
+[2025-02-09T22:26:19.554+0000] {docker.py:500} INFO - 46f3ffc15ad9: Pull complete
+[2025-02-09T22:26:19.556+0000] {docker.py:500} INFO - a3919cd00403: Extracting
+[2025-02-09T22:26:19.560+0000] {docker.py:500} INFO - a3919cd00403: Pull complete
+[2025-02-09T22:26:19.565+0000] {docker.py:495} INFO - Digest: sha256:f9364cd6e0c146966f8f23fc4fd85d53f2e604bdde74e3c06565194dc4a02f85
+[2025-02-09T22:26:19.567+0000] {docker.py:495} INFO - Status: Downloaded newer image for python:3.9-slim
+[2025-02-09T22:26:19.571+0000] {docker.py:359} INFO - Starting docker container from image python:3.9-slim
+[2025-02-09T22:26:19.579+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2025-02-09T22:26:19.940+0000] {docker.py:429} INFO - hello
+[2025-02-09T22:26:20.119+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-09T22:26:20.120+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=mgp-***1, task_id=docker_command_hello, run_id=manual__2025-02-09T22:26:12.058355+00:00, execution_date=20250209T222612, start_date=20250209T222614, end_date=20250209T222620
+[2025-02-09T22:26:20.171+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-09T22:26:20.189+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-09T22:26:20.190+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
